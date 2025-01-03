@@ -1,17 +1,16 @@
 // Array of video objects
 const videos = [
     { title: "Video 1", url: "./assets/1st.mp4", thumbnail: './assets/title/1stTitle.png' },
-    { title: "Video 2", url: "./assets/2nd.mp4", thumbnail: './assets/title/2ndTitle.png'},
-    { title: "Video 3", url: "./assets/3rd.mp4", thumbnail: './assets/title/3rdTitle.png'},
+    { title: "Video 2", url: "./assets/2nd.mp4", thumbnail: './assets/title/2ndTitle.png' },
+    { title: "Video 3", url: "./assets/3rd.mp4", thumbnail: './assets/title/3rdTitle.png' },
 ];
+
 
 // Function to populate the video list
 function populateVideoList() {
     const videoList = document.querySelector('.list-unstyled');
     videos.forEach((video, index) => {
-        
-
-        videoList.innerHTML += `<div class="card" style="width: 18rem;">
+        videoList.innerHTML += `<div class="card videoCard" style="width: 18rem;">
   <img src="${video.thumbnail}" class="card-img-top" alt="..." onclick="changeVideo('${video.url}')">
   <div class="card-body">
     <h5 class="card-title">Card title</h5>
@@ -42,7 +41,9 @@ function playPause() {
     }
 }
 
-// Populate the video list when the page loads
 window.onload = function () {
+    const videoDiv = document.querySelector('#myVideo')
+    videoDiv.innerHTML = `<source id="videoSource" src="'${videos[0].url}'" type="video/mp4">`
+
     populateVideoList();
 };

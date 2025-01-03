@@ -11,3 +11,24 @@ body {
     font-size: 16px;
   }
   
+  .mainVideo {
+    border: 1px solid transparent;
+    padding: 10px;
+  }
+
+  video {
+    border-radius: 10px;
+
+  }
+
+  .othVideos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .videoCard {
+
+    margin-bottom: 30px;
+  }
