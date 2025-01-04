@@ -2,6 +2,13 @@
 body {
     font-family: Arial, sans-serif;
   }
+
+
+  .navbarCustom {
+    display: flex;
+    justify-content: flex-end !important;
+   
+  }
   
   .video-player {
     text-align: center;
@@ -21,14 +28,36 @@ body {
 
   }
 
+  .videoTitle {
+    text-align: left !important;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  .videoDesc {
+    text-align: left !important;
+    font-size: 15px;
+  }
+
   .othVideos {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
+  .video-card {
+    cursor: pointer;
+    border: 1px solid black;
+  }
+  .card-title {
 
-  .videoCard {
+    font-size: 21px;
+  }
+  .card-text {
+    font-size: 15px;
+  }
+  .card-img {
+    height: 100%;
+    border: 1px solid lightgray;
+    padding: 10px;
 
-    margin-bottom: 30px;
   }
